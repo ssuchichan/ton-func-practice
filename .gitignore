@@ -1,0 +1,17 @@
+node_modules
+temp
+build
+dist
+.DS_Store
+package-lock.json
+
+# VS Code
+.vscode/*
+.history/
+*.vsix
+
+# IDEA files
+.idea
+
+# VIM
+Session.vim
