@@ -6,7 +6,7 @@
     return (ds~load_uint(64));
 }
 
-;; pure：非纯，表示该函数可能修改合约的存储、发送消息、抛出异常、验证数据合法性
+;; impure：非纯，表示该函数可能修改合约的存储、发送消息、抛出异常、验证数据合法性
 () save_data(int counter) impure inline {
     set_data(
         begin_cell()
