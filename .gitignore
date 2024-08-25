@@ -4,6 +4,7 @@ build
 dist
 .DS_Store
 package-lock.json
+yarn.lock
 
 # VS Code
 .vscode/*
