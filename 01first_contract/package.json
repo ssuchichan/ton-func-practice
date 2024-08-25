@@ -10,6 +10,7 @@
     "@jest/globals": "^29.7.0",
     "@orbs-network/ton-access": "^2.3.3",
     "@swc/core": "^1.7.14",
+    "@ton-community/blueprint": "^0.12.0",
     "@ton-community/func-js": "^0.7.0",
     "@ton-community/sandbox": "^0.11.0",
     "@ton-community/test-utils": "^0.3.0",
@@ -29,12 +30,7 @@
     "typescript": "^5.5.4"
   },
   "scripts": {
-    "compile": "ts-node ./scripts/compile.ts",
-    "test": "yarn compile && yarn jest",
-    "deploy": "yarn compile && TESTNET=true ts-node ./scripts/deploy.ts",
-    "deploy:mainnet": "yarn compile && ts-node ./scripts/deploy.ts",
-    "onchaintest": "TESTNET=true ts-node ./scripts/onchaintest.ts",
-    "onchaintest:mainnet": "ts-node ./scripts/onchaintest.ts"
+    "test": "yarn jest"
   },
   "dependencies": {
     "dotenv": "^16.4.5"

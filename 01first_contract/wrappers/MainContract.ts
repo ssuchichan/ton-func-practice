@@ -29,6 +29,15 @@ export class MainContract implements Contract {
         return new MainContract(address, init);
     }
 
+    async sendDeploy(provier: ContractProvider, via: Sender, value: bigint) {
+        await provier.internal(via, {
+            value,
+            sendMode: SendMode.PAY_GAS_SEPARATELY,
+            body: beginCell().storeUint(2, 32).endCell()
+        });
+    }
+
+
     async sendIncrement(provider: ContractProvider, sender: Sender, value: bigint, increment_by: number) {
         const msg_body = beginCell().storeUint(1, 32).storeUint(increment_by, 32).endCell();
 
